@@ -1,4 +1,4 @@
-#! /usr/bin/javascript
+#! /usr/bin/node
 
 
 let firstLine = 'C is fun'
