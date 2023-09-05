@@ -5,6 +5,7 @@ function theFunction(nb) {
 
 exports.addMeMaybe = function (x) {
     nb = theFunction(x)
+    console.log("New value: " + nb);
     return nb;
 }
 
