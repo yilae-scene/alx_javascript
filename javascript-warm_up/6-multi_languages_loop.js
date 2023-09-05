@@ -1,7 +1,8 @@
-#! /usr/bin/node.js
+#! /usr/bin/node
+
 
 const newArray = ['C is fun', 'Python is cool', 'JavaScript is amazing']
 
-for (let i = 0; i < newArray.length; i++){
+for (let i = 0; i < newArray.length; i++) {
     console.log(newArray[i])
-    }
+}
