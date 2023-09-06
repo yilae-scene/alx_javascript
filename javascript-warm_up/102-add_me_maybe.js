@@ -1,12 +1,6 @@
+#!/usr/bin/node
 
-function theFunction(nb) {
-    return nb = ++nb;
+exports.addMeMaybe = function (num , theFunction) {
+    theFunction(num = num +1);
 }
-
-exports.addMeMaybe = function (x) {
-    nb = theFunction(x)
-    console.log("New value: " + nb);
-    return nb;
-}
-
 
