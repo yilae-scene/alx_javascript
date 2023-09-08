@@ -4,7 +4,7 @@ class Rectangle {
     width;
     height;
     constructor(w, h) {
-        this.widht = w;
+        this.width = w;
         this.height = h;
     }
 }
