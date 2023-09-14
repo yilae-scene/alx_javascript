@@ -1,4 +1,4 @@
-#!/usr/bin/node
+//#!/usr/bin/node
 
 const request = require("request");
 
@@ -15,7 +15,7 @@ request.get(url, function (error, response, body) {
   const objBody = JSON.parse(body);
   const characters = objBody.characters;
   for (const char of characters) {
-    request(char, function (error,response, body){
+    request.get(char, function (error,response, body){
       if (error) {
         console.log(error);
         return;
