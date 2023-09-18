@@ -1,0 +1,24 @@
+div {
+margin: 0 200px;
+display: flex;
+flex-direction: column; 
+justify-content: center; 
+text-align: center;  
+}
+
+divison{
+    margin: 0 auto;
+    justify-self: flex-end;
+    justify-content: flex-end;
+    text-align: center;
+}
+
+a {
+text-decoration: none;
+color: skyblue;
+font-size: 1.3rem;
+}
+
+a:hover{
+    transform: scale(1.2);
+}
