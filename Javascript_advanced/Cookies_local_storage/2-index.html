@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+        body {
+            font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+                "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+            font-size: larger;
+        }
+
+        div {
+            display: flex;
+            margin-top: 15px;
+        }
+
+        label,
+        h1 {
+            font-size: 50px;
+            font-weight: bold;
+            padding-bottom: 10px;
+        }
+
+        #Email,
+        #Firstname {
+            margin: 0px 5px;
+        }
+
+        button {
+            border-radius: 5px;
+            font: 1em sans-serif;
+        }
+    </style>
+    <title>Document</title>
+</head>
+
+<body>
+    <label for="Login to the website">Login to the website</label>
+    <div>
+        <input type="text" name="Firstname" id="Firstname" placeholder=" Firstname" />
+        <input type="text" name="email" id="Email" placeholder="Email" />
+        <button onclick="setCookies()">Log me in</button>
+    </div>
+    <br />
+    <h1>Cookies</h1>
+    <button onclick="showCookies()">Show the cookies</button>
+    <script>
+        function setCookies() {
+            //call the values of the input texts with their IDs
+            const fName = document.getElementById("Firstname").value;
+            const eMail = document.getElementById("Email").value;
+            //assign those values to cookies.
+            document.cookie = `firstname = ${fName}; `;
+            document.cookie = `email = ${eMail};`;
+            //set expiry date 10 day from now
+            const d = new Date();
+            d.setTime(d.getTime() + 10 * 24 * 60 * 60 * 1000);
+            let expires = "expires=" + d.toUTCString();
+            document.cookie = expires + ";path=/";
+        }
+
+        function showCookies() {
+            //check if there is a value in the cookies
+            const email = getcookie('email')
+            const name = getcookie('firstname')
+            const p = document.createElement('p')
+            p.innerText = `Email: ${email} - Firstname: ${name}`
+            document.body.appendChild(p)
+
+        }
+
+        function getCookie(name) {
+            const cookies = document.cookie.split("; ");
+            for (let i = 0; i < cookies.length; i++) {
+                const cookie = cookies[i].split("=");
+                if (cookie[0] === name) {
+                    return cookie[1];
+                }
+            }
+            return ' ';
+        }
+    </script>
+</body>
+
+</html>
