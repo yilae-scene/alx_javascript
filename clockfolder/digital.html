@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@900&display=swap"
+      <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Allerta+Stencil&family=Orbitron:wght@900&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Digital clock</title>
+    <style>
+      body {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: url(background.jpg);
+        color: skyblue;
+      }
+
+      h1,
+      p {
+        text-align: center;
+        opacity: 0.5;
+        color: rgb(30, 33, 33);
+      }
+      h1{
+        font-family: 'Allerta Stencil', sans-serif;
+        margin-bottom: -40px;
+      }
+      p {
+        font-size: 100px;
+        border: 5px solid skyblue;
+        border-radius: 10px;
+        opacity: 0.5;
+        font-family: "Orbitron", sans-serif;
+        padding: 0 10px;
+        color:antiquewhite
+      }
+    </style>
+  </head>
+
+  <body>
+    <div>
+      <h1 id="date">Date</h1>
+      <p id="time">Time</p>
+    </div>
+    <script src="Content.js"></script>
+  </body>
+</html>

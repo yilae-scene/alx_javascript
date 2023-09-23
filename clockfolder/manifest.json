@@ -1,0 +1,19 @@
+{
+    "manifest_version": 3,
+    "name": "My digital_clock",
+    "version": "1.0",
+    "description": "A digital_clock that come on when a new tab is opened",
+    "chrome_url_overrides": {
+        "newtab": "digital.html"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "Content.js"
+            ]
+        }
+    ]
+}
